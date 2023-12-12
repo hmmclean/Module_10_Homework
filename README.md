@@ -9,3 +9,6 @@ Module 10 - Advanced SQL
           * app - python file with code for part 2 of the assignment.
        * Resources
           * Folder which contains provided data files: hawaii_measurements, hawaii_stations, and hawaii sqlite.
+
+# References
+ * ChatGPT (https://chat.openai.com/)
