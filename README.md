@@ -3,6 +3,9 @@ Module 10 - Advanced SQL
 
 # Folders and Files
   * Starter_Code - folder which contains the following:
-  *  climate_starter - jupyter notebook of code for part 1 of the assignment.
-  *  app - python file
-  *  Resources - folder which contains provided data files, hawaii_measurements, hawaii_stations, and hawaii sqlite.
+       * Part 1: Analyze and Explore the Climate Data
+          * climate_starter - jupyter notebook of code for part 1 of the assignment.
+       * Part 2: Design Your Climate App
+          * app - python file with code for part 2 of the assignment.
+       * Resources
+          * Folder which contains provided data files: hawaii_measurements, hawaii_stations, and hawaii sqlite.
