@@ -63,9 +63,7 @@ def prcp():
     # Query for data
     prcp_data = session.query(measurement.date, measurement.prcp).filter(measurement.date >= one_year).all()
     # Transfer data into a dictionary
-    prcp_dict = {}
-    for date, prcp in prcp_data:
-        prcp_dict[date] = prcp
+    prcp_dict = [{'date': date, 'prcp': prcp} for date, prcp in prcp_data]
     
     # Return in JSON format
     return jsonify(prcp_dict)
@@ -77,7 +75,7 @@ def stations():
     # Query for data
     all_stations = session.query(station.name).all()
     # Convert to list
-    stations_list = list(np.ravel(all_stations))
+    stations_list = [{'name': station[0]} for station in all_stations]
     
     # Return in JSON format
     return jsonify(stations_list)
@@ -90,9 +88,7 @@ def tobs():
     # Query for data
     temp_data = session.query(measurement.tobs, measurement.date).filter(measurement.date >= one_year).all()
     # Transfer data into a dictionary
-    temp_dict = {}
-    for date, tobs in temp_data:
-        temp_dict[date] = tobs
+    temp_dict = [{'date': date, 'tobs' : tobs} for date, tobs in temp_data]
     
     # Return in JSON format
     return jsonify(temp_dict)
